@@ -6,10 +6,12 @@ public class Mainmenu : MonoBehaviour {
     public Camera mainMenu;
     public Camera options;
     public Camera highscore;
+    public Camera Credits;
     public GameObject mainMenuCanvas;
     public GameObject optionsCanvas;
     public GameObject highScoreCanvas;
     public GameObject levelSelectCanvas;
+    public GameObject creditsScreenCanvas;
     public Camera levelSelect;
     public string level1;
    
@@ -24,6 +26,8 @@ public class Mainmenu : MonoBehaviour {
         highScoreCanvas.SetActive(false);
         levelSelect.enabled = false;
         levelSelectCanvas.SetActive(false);
+        Credits.enabled = false;
+        creditsScreenCanvas.SetActive(false);
         
     }
 
@@ -37,6 +41,8 @@ public class Mainmenu : MonoBehaviour {
         levelSelectCanvas.SetActive(false);
         highscore.enabled = false;
         highScoreCanvas.SetActive(false);
+        Credits.enabled = false;
+        creditsScreenCanvas.SetActive(false);
     }
 
     public void LoadLevel1()
@@ -56,6 +62,8 @@ public class Mainmenu : MonoBehaviour {
         highScoreCanvas.SetActive(true);
         levelSelect.enabled = false;
         levelSelectCanvas.SetActive(false);
+        Credits.enabled = false;
+        creditsScreenCanvas.SetActive(false);
 
     }
 
@@ -69,8 +77,25 @@ public class Mainmenu : MonoBehaviour {
         highScoreCanvas.SetActive(false);
         levelSelect.enabled = true;
         levelSelectCanvas.SetActive(true);
+        Credits.enabled = false;
+        creditsScreenCanvas.SetActive(false);
     }
 
+    public void CreditsScreen()
+    {
+        mainMenu.enabled = false;
+        options.enabled = false;
+        optionsCanvas.SetActive(false);
+        mainMenuCanvas.SetActive(false);
+        highscore.enabled = false;
+        highScoreCanvas.SetActive(false);
+        levelSelect.enabled = true;
+        levelSelectCanvas.SetActive(true);
+        Credits.enabled = true;
+        creditsScreenCanvas.SetActive(true);
+
+
+    }
    public void QuitGame()
     {
         Application.Quit();
@@ -88,6 +113,8 @@ public class Mainmenu : MonoBehaviour {
         highScoreCanvas.SetActive(false);
         levelSelect.enabled = false;
         levelSelectCanvas.SetActive(false);
+        Credits.enabled = false;
+        creditsScreenCanvas.SetActive(false);
 
     }
 }
